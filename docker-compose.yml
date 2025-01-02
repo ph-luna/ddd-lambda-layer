@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  localstack:
+    image: localstack/localstack
+    container_name: zeka_aws
+    environment:
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - SERVICES=lambda,iam,s3,apigateway,sts
+      - DEFAULT_REGION=us-east-1
+    ports:
+      - "4566:4566"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "/localstack:/var/lib/localstack"

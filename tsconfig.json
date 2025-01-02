@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "Node16",
+    "moduleResolution": "node16",
+    "baseUrl": "./",
+    "paths": {
+      "/opt/nodejs/node_modules/src/*": [
+        "src/*"
+      ]
+    },
+    "outDir": "./dist",
+    "removeComments": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "skipLibCheck": true,
+    "rootDir": "./",
+  }
+}
