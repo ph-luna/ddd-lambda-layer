@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest",
     "zip-layers": "cd ./dist/layers && bestzip ../layers.zip nodejs/*",
     "zip-functions": "cd ./dist && bestzip functions.zip functions/*",
     "build": "tsc && shx mkdir -p ./dist/layers/nodejs/node_modules && shx cp -r dist/src dist/layers/nodejs/node_modules && shx rm -r dist/src",
@@ -16,10 +16,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@vitest/coverage-v8": "^2.1.8",
     "bestzip": "^2.2.1",
     "mkdirp": "^3.0.1",
     "move-file-cli": "^3.0.0",
-    "rimraf": "^6.0.1"
+    "rimraf": "^6.0.1",
+    "shx": "^0.3.4",
+    "vitest": "^2.1.8"
   },
   "dependencies": {
     "typescript": "^5.7.2"

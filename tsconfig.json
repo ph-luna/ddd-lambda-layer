@@ -16,5 +16,9 @@
     "strictNullChecks": true,
     "skipLibCheck": true,
     "rootDir": "./",
-  }
+  },
+  "exclude": [
+    "vite.config.ts",
+    "tests/**"
+  ]
 }

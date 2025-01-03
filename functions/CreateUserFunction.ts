@@ -4,9 +4,9 @@ import InMemoryDbAdapter from "/opt/nodejs/node_modules/src/infra/dbAdapters/InM
 import UserEntity from "/opt/nodejs/node_modules/src/domain/entities/UserEntity";
 
 export async function handle(event: any, context: any) {
-  var dbAdapter = new InMemoryDbAdapter<UserEntity>();
-  var userRepository = new UserRepository(dbAdapter);
-  var service = new CreateUserService(userRepository);
+  const dbAdapter = new InMemoryDbAdapter<UserEntity>();
+  const userRepository = new UserRepository(dbAdapter);
+  const service = new CreateUserService(userRepository);
 
   await service.execute(event.body);
 
